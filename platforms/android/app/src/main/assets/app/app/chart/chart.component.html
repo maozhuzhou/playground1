@@ -1,0 +1,23 @@
+<ActionBar title="Groceries" class="action-bar">
+</ActionBar>
+<!--
+<GridLayout>
+	<ScrollView class="page">
+		<StackLayout class="home-panel">
+			 
+			<Label text="🔥 NativeScript 🔥" fontSize="40"></Label>
+			 
+			<Label textWrap="true" text="Write code in the editor or drag and drop components to build a NativeScript mobile application."
+			 class="h2 description-label"></Label>
+			  
+		</StackLayout>
+	</ScrollView>
+</GridLayout>
+-->
+<GridLayout>
+    <RadCartesianChart>
+        <CategoricalAxis tkCartesianHorizontalAxis></CategoricalAxis>
+        <LinearAxis tkCartesianVerticalAxis></LinearAxis>
+        <BarSeries tkCartesianSeries [items]="favoriteFruits" categoryProperty="type" valueProperty="count"></BarSeries>
+    </RadCartesianChart>
+</GridLayout>

@@ -1,0 +1,17 @@
+<ActionBar title="周大侠's apps" class="action-bar"></ActionBar>
+<StackLayout >
+
+	<Image src="~/app/images/apple.jpg"></Image>
+	 
+ 
+	<StackLayout  backgroundColor="palegreen">
+		<GridLayout  columns="*,*,*" horizontalAlignment="left" verticalAlignment="top" 
+		           backgroundColor="lightgray">
+			<Button  backgroundColor="red" text="Login" col="0" (tap)="loginClicked()"></Button>
+		    <Button backgroundColor="green"  text="Chart" col="1" (tap)="chartClicked()"></Button>	
+			<Button backgroundColor="blue"  text="Text" col="2" (tap)="TextClicked()"></Button>	
+				 
+		</GridLayout>
+	</StackLayout>		>
+
+</StackLayout>

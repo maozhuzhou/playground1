@@ -1,0 +1,10 @@
+@import "~nativescript-theme-core/css/core.light.css";
+
+ActionBar {
+  background-color: black;
+  color: red;
+}
+
+.test {
+    color: green;
+}

@@ -1,0 +1,19 @@
+<ActionBar title="SQL App">
+    
+    <GridLayout row="0" columns="100%, 100%">
+        <TextField   [(ngModel)]="firstName" hint="First Name" col="0"></TextField>
+        <TextField  #lastNameTextField [(ngModel)]="lastName" hint="Last Name" col="1"></TextField>
+    </GridLayout>
+    <ActionItem text="Add" ios.position="right" (tap)="insert()"></ActionItem>
+    <ActionItem text="Refresh" ios.position="left" (tap)="fetch()"></ActionItem>
+</ActionBar>
+
+
+
+<StackLayout>
+    <ListView [items]="people">
+        <ng-template let-person="item">
+            <Label text="{{ person.id }} {{ person.firstname }} {{ person.lastname }}"></Label>
+        </ng-template>
+    </ListView>
+</StackLayout>
