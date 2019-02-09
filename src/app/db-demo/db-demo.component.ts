@@ -1,5 +1,7 @@
 import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
 import { TextField } from "tns-core-modules/ui/text-field";
+import { ListViewEventData, RadListView } from "nativescript-ui-listview";
+
 var Sqlite = require("nativescript-sqlite");
 
 @Component({
@@ -46,9 +48,8 @@ export class DbDemoComponent implements OnInit {
       this.database.execSQL(
         "INSERT INTO people (firstname, lastname) VALUES (?, ?)", 
         [this.firstName.trim(), this.lastName.trim()]).then(id => {
-          console.log("INSERT RESULT", id);
-          this.fetch();
-          //or:  this.groceryList.unshift({ id: id, name: this.grocery });
+          console.log("INSERT RESULT", id);          
+          this.people.unshift({ id: id, firstName: this.firstName, lastName:this.lastName });
           this.firstName = "";
           this.lastName = "";
       }, error => {
@@ -70,4 +71,14 @@ export class DbDemoComponent implements OnInit {
           console.log("SELECT ERROR", error);
       });
   }
+
+  delete(args: ListViewEventData) {
+		let person = <any>args.object.bindingContext;
+		this.database.execSQL("DELETE FROM people WHERE id=?", [person.id]).then(() => {
+			let index = this.people.indexOf(person);
+			this.people.splice(index, 1);
+			console.log(" Item deleted successfully!")
+		});
+
+	}
 }
