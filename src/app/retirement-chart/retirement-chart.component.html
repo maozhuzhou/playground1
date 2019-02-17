@@ -1,0 +1,12 @@
+   
+    <GridLayout>
+        <RadCartesianChart>
+            <CategoricalAxis tkCartesianHorizontalAxis></CategoricalAxis>
+            <LinearAxis tkCartesianVerticalAxis></LinearAxis>
+            <BarSeries tkCartesianSeries showLabels="true"  [items]="outputs" 
+                       categoryProperty="type" valueProperty="count">                
+            </BarSeries>
+        </RadCartesianChart>
+    </GridLayout>
+
+

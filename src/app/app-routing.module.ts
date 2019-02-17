@@ -10,6 +10,8 @@ import { HomeComponent } from "./home/home.component";
 import { ChartComponent } from "./chart/chart.component";
 import { TextComponent } from "./text/text.component";
 import { DbDemoComponent } from "./db-demo/db-demo.component";
+import { RetirementPlanComponent } from "./retirement-plan/retirement-plan.component";
+import { RetirementInputComponent } from "./retirement-input/retirement-input.component";
 
 //const routes: Routes = [
  //   { path: "", redirectTo: "/items", pathMatch: "full" },
@@ -18,7 +20,10 @@ import { DbDemoComponent } from "./db-demo/db-demo.component";
 //];
 
 const routes: Routes = [
-    { path: "", component: DbDemoComponent }, 
+    { path: "", component: DbDemoComponent },
+    //{ path: "", component: RetirementInputComponent }, 
+    { path: "retirementInput", component: RetirementInputComponent },
+    { path: "retirementChart", component: RetirementPlanComponent },
     //{ path: "", redirectTo: "/home", pathMatch: "full" },    
     { path: "home", component: HomeComponent },
     { path: "login", component: LoginComponent },

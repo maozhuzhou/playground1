@@ -1,0 +1,105 @@
+
+<ActionBar title="">
+        <Label col="0" row="0"  class="h4 p-15" text="How much will you need to retire at {{retirementInput.age}}?" textWrap="false">
+                </Label>
+        <NavigationButton android.systemIcon="ic_menu_back"
+         text="Back to ActionBar" (tap)="moreTap()"></NavigationButton>
+     </ActionBar>
+     <RadDataForm tkExampleTitle tkToggleNavButton [source]="retirementInput">
+
+     </RadDataForm>
+
+<!--     
+<RadDataForm tkExampleTitle tkToggleNavButton [source]="person">
+        <TKEntityProperty tkDataFormProperty name="name" displayName="Name" index="0"></TKEntityProperty>
+        <TKEntityProperty tkDataFormProperty name="age" displayName="Age" index="1">
+            <TKPropertyEditor tkEntityPropertyEditor type="Number"></TKPropertyEditor>
+        </TKEntityProperty>
+        <TKEntityProperty tkDataFormProperty name="email" displayName="E-Mail" index="2">
+            <TKPropertyEditor tkEntityPropertyEditor type="Email"></TKPropertyEditor>
+        </TKEntityProperty>
+        <TKEntityProperty tkDataFormProperty name="city" displayName="City" index="3" valuesProvider="New York, Washington, Los Angeles">
+            <TKPropertyEditor tkEntityPropertyEditor type="Picker"></TKPropertyEditor>
+        </TKEntityProperty>
+        <TKEntityProperty tkDataFormProperty name="street" displayName="Street Name" index="4"></TKEntityProperty>
+        <TKEntityProperty tkDataFormProperty name="streetNumber" displayName="Street Number" index="5">
+            <TKPropertyEditor tkEntityPropertyEditor type="Number"></TKPropertyEditor>
+        </TKEntityProperty>
+
+</RadDataForm>
+
+
+
+<ActionBar title="">
+    <Label col="0" row="0"  class="h4 p-15" text="How much will you need to retire at {{retirementInput.age}}?" textWrap="false">
+            </Label>
+    <NavigationButton android.systemIcon="ic_menu_back"
+     text="Back to ActionBar" (tap)="moreTap()"></NavigationButton>
+ </ActionBar>
+
+
+ <GridLayout columns="auto,*" rows="auto,auto,auto,auto,auto,auto,auto,auto,auto">
+       <Label col="0" row="0"  class="h3 p-15" text="My age: " textWrap="false">
+        </Label>
+    <TextField col="1" row="0"   autocorrect="false" 
+         [(ngModel)]="retirementInput.age"       
+            (returnPress)="onReturn($event)" >
+    </TextField>
+
+    <Label  col="0" row="1" class="h3 p-15" text="My pre-tax income: " textWrap="false">
+        </Label>
+    <TextField col="1" row="1"   autocorrect="false"          
+    [(ngModel)]="retirementInput.preTaxIncome"    (returnPress)="onReturn($event)" >
+    </TextField>
+
+    <Label   col="0" row="2" class="h3 p-15" text="My current savings: " textWrap="false">
+    </Label>
+    <TextField  col="1" row="2" [(ngModel)]="retirementInput.currentSavings"   autocorrect="false"          
+            (returnPress)="onReturn($event)" class="input input-border">
+    </TextField>
+
+    <Label   col="0" row="3" class="h3 p-15" text="Every month I save: " textWrap="false">
+    </Label>
+    <GridLayout  col="1" row="3" columns="*,*,*,*" rows="*" sdkExampleTitle sdkToggleNavButton>
+            <Button text="-" col="0" style="background-color: #FFFF66; margin: 0;"></Button>
+            <TextField  col="1" colSpan="2" [(ngModel)]="retirementInput.monthSave" autocorrect="false"  style="margin: 0;"        
+                  (returnPress)="onReturn($event)" >
+            </TextField>
+            <Button text="+" col="3" colSpan="3" style="background-color: #0099CC; margin: 0;"></Button>
+    </GridLayout>
+
+    <Label   col="0" row="4" class="h4 p-15" text="Monthly retirement spending:" textWrap="true">
+    </Label>
+    <TextField  col="1" row="4" [(ngModel)]="retirementInput.monthlyRetirementSpending" autocorrect="false"          
+            (returnPress)="onReturn($event)" class="input input-border">
+    </TextField>
+
+
+    <Label   col="0" row="5" class="h4 p-15" text="Other expected income:" textWrap="false">
+        </Label>
+        <TextField  col="1" row="5" [(ngModel)]="retirementInput.otherExpectedIncome" autocorrect="false"          
+                (returnPress)="onReturn($event)" class="input input-border">
+        </TextField>
+
+
+        <Label   col="0" row="6" class="h4 p-15" text="I want to retire at age:" textWrap="false">
+            </Label>
+            <TextField  col="1" row="6" [(ngModel)]="retirementInput.wantToRetireAtAge" autocorrect="false"          
+                    (returnPress)="onReturn($event)" class="input input-border">
+            </TextField>
+
+            <Label   col="0" row="7" class="h4 p-15" text="Life expectancy:" textWrap="false">
+                </Label>
+                <TextField  col="1" row="7" [(ngModel)]="retirementInput.lifeExpectancy" autocorrect="false"          
+                        (returnPress)="onReturn($event)" class="input input-border">
+                </TextField>
+
+                <Label   col="0" row="8" class="h4 p-15" text="Investment rate of return:" textWrap="false">
+                    </Label>
+                    <TextField  col="1" row="8" [(ngModel)]="retirementInput.investmentRateOfReturn" autocorrect="false"          
+                            (returnPress)="onReturn($event)" class="input input-border">
+                    </TextField>
+</GridLayout>
+-->
+
+

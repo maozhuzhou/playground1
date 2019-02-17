@@ -14,6 +14,8 @@ import { HomeComponent } from "./home/home.component";
 import { ChartModule } from "./chart/chart.module" 
 import { TextComponent } from "./text/text.component";
 import { DbDemoComponent } from './db-demo/db-demo.component';
+import { RetirementPlanModule } from './retirement-plan/retirement-plan.module';
+import { DbDemoService } from "./shared/dbDemo/db-demo.service";
 //import { NativeScriptRouterModule } from "nativescript-angular/router";
 // Uncomment and add to NgModule imports if you need to use two-way binding
 // import { NativeScriptFormsModule } from "nativescript-angular/forms";
@@ -32,6 +34,7 @@ import { DbDemoComponent } from './db-demo/db-demo.component';
         NativeScriptHttpModule,
         NativeScriptUIListViewModule,
         ChartModule,
+        RetirementPlanModule,
         //NativeScriptRouterModule.forRoot(routes)
     ],
     declarations: [
@@ -42,9 +45,9 @@ import { DbDemoComponent } from './db-demo/db-demo.component';
         ListComponent,
         HomeComponent,
         TextComponent,
-        DbDemoComponent,
+        DbDemoComponent,        
     ],
-    providers: [],
+    providers: [DbDemoService],
     schemas: [
         NO_ERRORS_SCHEMA
     ]

@@ -1,6 +1,8 @@
 import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
 import { TextField } from "tns-core-modules/ui/text-field";
 import { ListViewEventData, RadListView } from "nativescript-ui-listview";
+import { DbDemoService } from '../shared/dbDemo/db-demo.service';
+import { Observable, throwError } from "rxjs";
 
 var Sqlite = require("nativescript-sqlite");
 
@@ -17,7 +19,7 @@ export class DbDemoComponent implements OnInit {
   lastName = "";
   @ViewChild("lastNameTextField") lastNameTextField: ElementRef;
 
-  public constructor() {
+  public constructor(private dbservice: DbDemoService) {
       this.people = [];
       (new Sqlite("my.db")).then(db => {
           db.execSQL("CREATE TABLE IF NOT EXISTS people (id INTEGER PRIMARY KEY AUTOINCREMENT, firstname TEXT, lastname TEXT)").then(id => {
@@ -57,20 +59,63 @@ export class DbDemoComponent implements OnInit {
       });
   }
 
-  public fetch() {
-      this.database.all("SELECT * FROM people").then(rows => {
-          this.people = [];
-          for(var row in rows) {
-              this.people.push({
-                  "id": rows[row][0],
-                  "firstname": rows[row][1],
-                  "lastname": rows[row][2]
-              });
-          }
-      }, error => {
-          console.log("SELECT ERROR", error);
-      });
+  //use observable
+  public fetch2(){
+    this.people = [];
+    this.dbservice.fetchById2(3)
+     .subscribe(person => {        
+        this.people.push(person);        
+    }, error =>{
+        console.log("fetch() ERROR")
+        console.dir(error)
+    })    
   }
+
+  //use promise
+  public fetch(){
+    this.people = [];
+    this.dbservice.fetchById(3)
+    .then(person => {
+        console.log("3")
+        let p = person;
+        
+        if(p){
+            console.log("33");
+            this.people.push(p);
+        }
+    }, error =>{
+        console.log("fetch() ERROR")
+        console.dir(error)
+    })    
+  }
+
+//   public fetch(){
+//     this.dbservice.fetchById(3)
+//     .subscribe(people => {
+//         this.people = people;
+//         console.log("3")
+//         if(this.people[0]){
+//             console.log("33")
+//         }
+//     }, error =>{
+//         console.log("fetch() ERROR")
+//     })
+    
+//   }
+//   public fetch() {
+//       this.database.all("SELECT * FROM people").then(rows => {
+//           this.people = [];
+//           for(var row in rows) {
+//               this.people.push({
+//                   "id": rows[row][0],
+//                   "firstname": rows[row][1],
+//                   "lastname": rows[row][2]
+//               });
+//           }
+//       }, error => {
+//           console.log("SELECT ERROR", error);
+//       });
+//   }
 
   delete(args: ListViewEventData) {
 		let person = <any>args.object.bindingContext;
