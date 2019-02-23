@@ -9,6 +9,7 @@
     "@angular/platform-browser-dynamic": true,
     "@angular/router": true,
     "nativescript-angular": true,
+    "nativescript-directions": true,
     "nativescript-sqlite": true,
     "nativescript-theme-core": true,
     "nativescript-ui-calendar": true,
@@ -23,6 +24,7 @@
     "zone.js": true,
     "tslib": true,
     "nativescript-intl": true,
+    "nativescript-appavailability": true,
     "nativescript-ui-core": true,
     "nativescript-ui-autocomplete": true,
     "tns-core-modules-widgets": true

@@ -69,7 +69,7 @@ export class DbDemoService {
                return promise2;
            }, error => {
                console.log("fetchById() : SELECT ERROR", error);
-           })    
+           })               
         .catch(() => {
                console.log('Do that');
         })

@@ -11,9 +11,16 @@ F:\lzhou_code\playground1\platforms\android\app\src\main\assets\app\app\item\ite
 F:\lzhou_code\playground1\platforms\android\app\src\main\assets\app\app\item\items.component.js
 F:\lzhou_code\playground1\platforms\android\app\src\main\assets\app\app\list\list.component.js
 F:\lzhou_code\playground1\platforms\android\app\src\main\assets\app\app\login\login.component.js
+F:\lzhou_code\playground1\platforms\android\app\src\main\assets\app\app\retirement-chart\retirement-chart.component.js
+F:\lzhou_code\playground1\platforms\android\app\src\main\assets\app\app\retirement-input\retirement-input.component.js
+F:\lzhou_code\playground1\platforms\android\app\src\main\assets\app\app\retirement-plan\retirement-plan.component.js
+F:\lzhou_code\playground1\platforms\android\app\src\main\assets\app\app\retirement-plan\retirement-plan.module.js
 F:\lzhou_code\playground1\platforms\android\app\src\main\assets\app\app\shared\config.js
+F:\lzhou_code\playground1\platforms\android\app\src\main\assets\app\app\shared\dbDemo\db-demo.service.js
 F:\lzhou_code\playground1\platforms\android\app\src\main\assets\app\app\shared\grocery\grocery.model.js
 F:\lzhou_code\playground1\platforms\android\app\src\main\assets\app\app\shared\grocery\grocery.service.js
+F:\lzhou_code\playground1\platforms\android\app\src\main\assets\app\app\shared\retirement\retirement.model.js
+F:\lzhou_code\playground1\platforms\android\app\src\main\assets\app\app\shared\retirement\retirement.service.js
 F:\lzhou_code\playground1\platforms\android\app\src\main\assets\app\app\shared\status-bar-util.js
 F:\lzhou_code\playground1\platforms\android\app\src\main\assets\app\app\shared\user\user.model.js
 F:\lzhou_code\playground1\platforms\android\app\src\main\assets\app\app\shared\user\user.service.js
@@ -94,6 +101,9 @@ F:\lzhou_code\playground1\platforms\android\app\src\main\assets\app\tns_modules\
 F:\lzhou_code\playground1\platforms\android\app\src\main\assets\app\tns_modules\nativescript-angular\zone-js\dist\zone-nativescript.mocha.js
 F:\lzhou_code\playground1\platforms\android\app\src\main\assets\app\tns_modules\nativescript-angular\zone-js\testing.jasmine.js
 F:\lzhou_code\playground1\platforms\android\app\src\main\assets\app\tns_modules\nativescript-angular\zone-js\testing.mocha.js
+F:\lzhou_code\playground1\platforms\android\app\src\main\assets\app\tns_modules\nativescript-appavailability\appavailability.js
+F:\lzhou_code\playground1\platforms\android\app\src\main\assets\app\tns_modules\nativescript-directions\directions.common.js
+F:\lzhou_code\playground1\platforms\android\app\src\main\assets\app\tns_modules\nativescript-directions\directions.js
 F:\lzhou_code\playground1\platforms\android\app\src\main\assets\app\tns_modules\nativescript-intl\index.js
 F:\lzhou_code\playground1\platforms\android\app\src\main\assets\app\tns_modules\nativescript-intl\nativescript-intl-common.js
 F:\lzhou_code\playground1\platforms\android\app\src\main\assets\app\tns_modules\nativescript-intl\nativescript-intl.js

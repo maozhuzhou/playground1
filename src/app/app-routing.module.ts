@@ -20,7 +20,8 @@ import { RetirementInputComponent } from "./retirement-input/retirement-input.co
 //];
 
 const routes: Routes = [
-    { path: "", component: DbDemoComponent },
+    { path: "", component: TextComponent },
+    //{ path: "", component: DbDemoComponent },
     //{ path: "", component: RetirementInputComponent }, 
     { path: "retirementInput", component: RetirementInputComponent },
     { path: "retirementChart", component: RetirementPlanComponent },
